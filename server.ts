@@ -38,7 +38,7 @@ async function createServer() {
   });
 
   app.listen(8080, () => {
-    console.log("Server is runnins on http://localhost:8080");
+    console.log("Server is running on http://localhost:8080");
     console.log("http://127.0.0.1:8080");
   });
 }
