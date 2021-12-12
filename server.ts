@@ -13,12 +13,13 @@ async function createServer() {
     server: { middlewareMode: "ssr" },
   });
   app.use(vite.middlewares);
+  // deepcode ignore NoRateLimitingForExpensiveWebOperation: dev environment
   app.use("*", async (req: Request, res: Response) => {
     const url = req.originalUrl;
     try {
       let template = fs.readFileSync(
         path.resolve(__dirname, "index.html"),
-        "utf-8"
+        "utf8"
       );
 
       template = await vite.transformIndexHtml(url, template);
