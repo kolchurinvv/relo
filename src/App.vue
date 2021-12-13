@@ -5,7 +5,7 @@ import HelloWorld from "./pages/home.vue";
 </script>
 
 <template lang="pug">
-hello-world
+router-view
 </template>
 
 <style lang="sass"></style>
